@@ -1,0 +1,48 @@
+File 0: Simple and beautiful code that passes the Betty checks
+File 1: A UNIX command line interpreter.
+File 2: A simple shell that handles Commandlines with argue=ments
+File 3: The simple shell should handles the PATH (fork must not be called if the command doesn’t exist)
+File 4: The Shell: a)Implement the exit built-in, that exits the shell
+                   b)Usage: exit
+                   c)we didn’t have to handle any argument to the built-in exit
+File 5: The shell Implements the 'env' built-in, that prints the current environment
+File 6: The shell implements: a)our own getline function
+                              b)Use a buffer to read many chars at once and call the least possible the read system call
+                              c)The usage of static variables
+                              d)we were not allowed to use getline
+			      e)we didn't have to be able to move the cursor
+File 7: we were not allowed to use strtok 
+File 8: a)Handling arguments for the built-in exit
+        b)Usage: exit status, where status is an integer used to exit the shell
+File 9: Implementation of the 'setenv' and 'unsetenv' builtin commands
+       1)setenv
+            a)Initialize a new environment variable, or modify an existing one
+            b)Command syntax: setenv VARIABLE VALUE
+            c)Should print something on stderr on failure
+       2)unsetenv
+            a)Remove an environment variable
+            b)Command syntax: unsetenv VARIABLE
+            c)Should print something on stderr on failure
+File 10: Implementation of the builtin command cd:
+            a)Changes the current directory of the process.
+            b)Command syntax: cd [DIRECTORY]
+            c)If no argument is given to cd the command must be interpreted like cd $HOME
+            d)You have to handle the command cd -
+            e)You have to update the environment variable PWD when you change directory(man chdir, man getcwd)
+File 11: Handling the commands separator ;
+File 12: Handling the && and || shell logical operators
+File 13: Implementation of the alias builtin command
+            a)Usage: alias [name[='value'] ...]
+            b)alias: Prints a list of all aliases, one per line, in the form name='value'
+            c)alias name [name2 ...]: Prints the aliases name, name2, etc 1 per line, in the form name='value'
+            d)alias name='value' [...]: Defines an alias for each name whose value is given. If name is already an alias, replaces
+	      value with 'value'
+File 14: Handling variables replacement
+            a)Handling the $? variable
+            b)Handling the $$ variable
+File 15: Handling comments (#)
+File 16: a)Usage: simple_shell [filename]
+         b)Your shell can take a file as a command line argument
+         c)The file contains all the commands that your shell should run before exiting
+         d)The file should contain one command per line
+         e)In this mode, the shell should not print a prompt and should not read from stdin
